@@ -100,5 +100,10 @@ namespace APP_NATURAL_VERDE
         {
 
         }
+
+        private void txtFiltrarNombre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

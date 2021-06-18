@@ -42,6 +42,7 @@ namespace APP_NATURAL_VERDE
                 else if (dao.agregarDia(dia))
                 {
                     MetroFramework.MetroMessageBox.Show(ActiveForm, "DIA GUARDADO ", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgDiasDisponibles.DataSource = dao.listadoDia();
                 }
                 else
                 {
@@ -71,6 +72,7 @@ namespace APP_NATURAL_VERDE
                     if (dao.eliminarDia(codigo))
                     {
                         MetroFramework.MetroMessageBox.Show(ActiveForm, "DIA ELIMINADO ", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dgDiasDisponibles.DataSource = dao.listadoDia();
                     }
                     else
                     {

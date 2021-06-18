@@ -207,6 +207,7 @@
             this.txtFiltrarNombre.UseSelectable = true;
             this.txtFiltrarNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtFiltrarNombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFiltrarNombre.Click += new System.EventHandler(this.txtFiltrarNombre_Click);
             this.txtFiltrarNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltrarNombre_KeyUp);
             // 
             // GestiondeEquipos

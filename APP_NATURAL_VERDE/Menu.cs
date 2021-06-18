@@ -56,5 +56,24 @@ namespace APP_NATURAL_VERDE
         {
             agregarDia(new GestionDias());
         }
+
+        private void agregarServicio(object formularioServicio)
+        {
+
+            this.panelContenedor.Controls.Clear();
+
+            Form fs = formularioServicio as Form;
+            fs.TopLevel = false;
+            fs.Dock = DockStyle.Fill;
+
+            this.panelContenedor.Controls.Add(fs);
+            this.panelContenedor.Tag = fs;
+            fs.Show();
+        }
+
+        private void btnServicios_Click(object sender, EventArgs e)
+        {
+            agregarServicio(new Servicios());
+        }
     }
 }
