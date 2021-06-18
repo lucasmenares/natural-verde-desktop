@@ -38,6 +38,7 @@ C:\Users\Paula\Desktop\APP_NATURAL_VERDE\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL
 C:\Users\Paula\Desktop\APP_NATURAL_VERDE\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.csproj.CopyComplete
 C:\Users\Paula\Desktop\APP_NATURAL_VERDE\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.exe
 C:\Users\Paula\Desktop\APP_NATURAL_VERDE\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.pdb
+<<<<<<< Updated upstream
 C:\Users\kahli\OneDrive\Escritorio\GitHub\natural-verde-desktop\APP_NATURAL_VERDE\bin\Debug\APP_NATURAL_VERDE.exe.config
 C:\Users\kahli\OneDrive\Escritorio\GitHub\natural-verde-desktop\APP_NATURAL_VERDE\bin\Debug\APP_NATURAL_VERDE.exe
 C:\Users\kahli\OneDrive\Escritorio\GitHub\natural-verde-desktop\APP_NATURAL_VERDE\bin\Debug\APP_NATURAL_VERDE.pdb
@@ -58,3 +59,25 @@ C:\Users\kahli\OneDrive\Escritorio\GitHub\natural-verde-desktop\APP_NATURAL_VERD
 C:\Users\kahli\OneDrive\Escritorio\GitHub\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.csproj.CopyComplete
 C:\Users\kahli\OneDrive\Escritorio\GitHub\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.exe
 C:\Users\kahli\OneDrive\Escritorio\GitHub\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.pdb
+=======
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\bin\Debug\APP_NATURAL_VERDE.exe.config
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\bin\Debug\APP_NATURAL_VERDE.exe
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\bin\Debug\APP_NATURAL_VERDE.pdb
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\bin\Debug\MetroFramework.Design.dll
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\bin\Debug\MetroFramework.dll
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.csprojAssemblyReference.cache
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.GestionDias.resources
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.GestiondeEquipos.resources
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.GestionProyectos.resources
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.Insumos.resources
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.Menu.resources
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.Properties.Resources.resources
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.Proyectos.resources
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.Servicios.resources
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.csproj.GenerateResource.cache
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.csproj.CoreCompileInputs.cache
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.csproj.CopyComplete
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.exe
+C:\Users\Paula\Desktop\APP_NATURAL_VERDE\natural-verde-desktop\APP_NATURAL_VERDE\obj\Debug\APP_NATURAL_VERDE.pdb
+>>>>>>> Stashed changes
