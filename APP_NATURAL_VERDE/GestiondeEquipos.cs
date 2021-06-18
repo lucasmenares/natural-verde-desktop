@@ -37,6 +37,7 @@ namespace APP_NATURAL_VERDE
                 else if ( dao.AgregarEquipo(equipo))
                 {
                     MetroFramework.MetroMessageBox.Show(ActiveForm,"EQUIPO GUARDADO " , "Notificación", MessageBoxButtons.OK , MessageBoxIcon.Information );
+                    dgGestionEquipo.DataSource = dao.listadoEquipo();
                 }
                 else
                 {
@@ -66,6 +67,7 @@ namespace APP_NATURAL_VERDE
                     if (dao.eliminarEquipo(codigo))
                     {
                         MetroFramework.MetroMessageBox.Show(ActiveForm, "EQUIPO ELIMINADO ", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        dgGestionEquipo.DataSource = dao.listadoEquipo();
                     }
                     else
                     {
