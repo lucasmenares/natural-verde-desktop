@@ -11,8 +11,8 @@
 *.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
-bin/*
-obj/*
+**/*/bin/*
+**/*/obj/*
 *.userprefs
 
 # Mono auto generated files
