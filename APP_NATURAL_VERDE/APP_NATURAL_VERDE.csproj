@@ -75,6 +75,12 @@
     <Compile Include="GestiondeEquipos.Designer.cs">
       <DependentUpon>GestiondeEquipos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionHorario.Designer.cs">
+      <DependentUpon>GestionHorario.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionProyectos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestiondeEquipos.resx">
       <DependentUpon>GestiondeEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionHorario.resx">
+      <DependentUpon>GestionHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionProyectos.resx">
       <DependentUpon>GestionProyectos.cs</DependentUpon>
