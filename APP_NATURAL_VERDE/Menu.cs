@@ -52,6 +52,20 @@ namespace APP_NATURAL_VERDE
             fd.Show();
         }
 
+        private void gestionHorario(object formularioHorario)
+        {
+
+            this.panelContenedor.Controls.Clear();
+
+            Form fd = formularioHorario as Form;
+            fd.TopLevel = false;
+            fd.Dock = DockStyle.Fill;
+
+            this.panelContenedor.Controls.Add(fd);
+            this.panelContenedor.Tag = fd;
+            fd.Show();
+        }
+
         private void btnGestionDias_Click(object sender, EventArgs e)
         {
             agregarDia(new GestionDias());
@@ -74,6 +88,11 @@ namespace APP_NATURAL_VERDE
         private void btnServicios_Click(object sender, EventArgs e)
         {
             agregarServicio(new Servicios());
+        }
+
+        private void btnGestionHorario_Click(object sender, EventArgs e)
+        {
+            gestionHorario(new GestionHorario());
         }
     }
 }

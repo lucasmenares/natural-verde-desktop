@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelBotones = new System.Windows.Forms.Panel();
+            this.btnGestionHorario = new System.Windows.Forms.Button();
             this.btnGestionEquipo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.btnGestionHorario = new System.Windows.Forms.Button();
             this.panelBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -97,6 +97,20 @@
             this.panelBotones.Size = new System.Drawing.Size(200, 594);
             this.panelBotones.TabIndex = 0;
             // 
+            // btnGestionHorario
+            // 
+            this.btnGestionHorario.FlatAppearance.BorderSize = 0;
+            this.btnGestionHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionHorario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionHorario.ForeColor = System.Drawing.Color.White;
+            this.btnGestionHorario.Location = new System.Drawing.Point(55, 410);
+            this.btnGestionHorario.Name = "btnGestionHorario";
+            this.btnGestionHorario.Size = new System.Drawing.Size(142, 25);
+            this.btnGestionHorario.TabIndex = 14;
+            this.btnGestionHorario.Text = "Gestion de Horario";
+            this.btnGestionHorario.UseVisualStyleBackColor = true;
+            this.btnGestionHorario.Click += new System.EventHandler(this.btnGestionHorario_Click);
+            // 
             // btnGestionEquipo
             // 
             this.btnGestionEquipo.FlatAppearance.BorderSize = 0;
@@ -125,11 +139,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(41, 70);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 21);
+            this.label4.Size = new System.Drawing.Size(145, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "NATURALVERDE";
             // 
@@ -292,7 +306,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(406, 209);
+            this.label5.Location = new System.Drawing.Point(438, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 18);
             this.label5.TabIndex = 8;
@@ -312,17 +326,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(322, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(243, 43);
+            this.label2.Size = new System.Drawing.Size(322, 42);
             this.label2.TabIndex = 6;
             this.label2.Text = "NATURALVERDE";
             // 
             // pictureBox12
             // 
             this.pictureBox12.Image = global::APP_NATURAL_VERDE.Properties.Resources.Vector2;
-            this.pictureBox12.Location = new System.Drawing.Point(401, 140);
+            this.pictureBox12.Location = new System.Drawing.Point(433, 140);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(85, 76);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -378,19 +392,6 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
-            // 
-            // btnGestionHorario
-            // 
-            this.btnGestionHorario.FlatAppearance.BorderSize = 0;
-            this.btnGestionHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGestionHorario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestionHorario.ForeColor = System.Drawing.Color.White;
-            this.btnGestionHorario.Location = new System.Drawing.Point(55, 410);
-            this.btnGestionHorario.Name = "btnGestionHorario";
-            this.btnGestionHorario.Size = new System.Drawing.Size(142, 25);
-            this.btnGestionHorario.TabIndex = 14;
-            this.btnGestionHorario.Text = "Gestion de Horario";
-            this.btnGestionHorario.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
