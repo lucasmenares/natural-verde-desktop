@@ -54,6 +54,7 @@
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.btnGestionHorario = new System.Windows.Forms.Button();
             this.panelBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -73,6 +74,7 @@
             // panelBotones
             // 
             this.panelBotones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panelBotones.Controls.Add(this.btnGestionHorario);
             this.panelBotones.Controls.Add(this.btnGestionEquipo);
             this.panelBotones.Controls.Add(this.label6);
             this.panelBotones.Controls.Add(this.label4);
@@ -101,7 +103,7 @@
             this.btnGestionEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionEquipo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionEquipo.ForeColor = System.Drawing.Color.White;
-            this.btnGestionEquipo.Location = new System.Drawing.Point(55, 400);
+            this.btnGestionEquipo.Location = new System.Drawing.Point(58, 323);
             this.btnGestionEquipo.Name = "btnGestionEquipo";
             this.btnGestionEquipo.Size = new System.Drawing.Size(142, 25);
             this.btnGestionEquipo.TabIndex = 13;
@@ -161,7 +163,7 @@
             this.btnProyectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProyectos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProyectos.ForeColor = System.Drawing.Color.White;
-            this.btnProyectos.Location = new System.Drawing.Point(80, 332);
+            this.btnProyectos.Location = new System.Drawing.Point(80, 269);
             this.btnProyectos.Name = "btnProyectos";
             this.btnProyectos.Size = new System.Drawing.Size(79, 25);
             this.btnProyectos.TabIndex = 10;
@@ -184,7 +186,7 @@
             this.btnGestionpro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionpro.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionpro.ForeColor = System.Drawing.Color.White;
-            this.btnGestionpro.Location = new System.Drawing.Point(65, 285);
+            this.btnGestionpro.Location = new System.Drawing.Point(68, 238);
             this.btnGestionpro.Name = "btnGestionpro";
             this.btnGestionpro.Size = new System.Drawing.Size(113, 25);
             this.btnGestionpro.TabIndex = 8;
@@ -377,6 +379,19 @@
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
             // 
+            // btnGestionHorario
+            // 
+            this.btnGestionHorario.FlatAppearance.BorderSize = 0;
+            this.btnGestionHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionHorario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionHorario.ForeColor = System.Drawing.Color.White;
+            this.btnGestionHorario.Location = new System.Drawing.Point(55, 410);
+            this.btnGestionHorario.Name = "btnGestionHorario";
+            this.btnGestionHorario.Size = new System.Drawing.Size(142, 25);
+            this.btnGestionHorario.TabIndex = 14;
+            this.btnGestionHorario.Text = "Gestion de Horario";
+            this.btnGestionHorario.UseVisualStyleBackColor = true;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,5 +449,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnGestionEquipo;
+        private System.Windows.Forms.Button btnGestionHorario;
     }
 }
