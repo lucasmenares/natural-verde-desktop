@@ -59,7 +59,7 @@ namespace APP_NATURAL_VERDE.Dao
                     Horario horario = new Horario()
                     {
                         codigo = Convert.ToInt32(rdr["Codigo Horario"]),
-                        dia = Convert.ToString(rdr["Dia"]),
+                        dia = Convert.ToDateTime(rdr["Dia"]),
                         hora = Convert.ToString(rdr["Hora"]),
                         equipo = Convert.ToString(rdr["Equipo"]),
                         proyecto = Convert.ToString(rdr["Proyecto"])
@@ -87,7 +87,7 @@ namespace APP_NATURAL_VERDE.Dao
                 String baseQuery = "select horario.codigo as \"Codigo Horario\", dia.dia as \"Dia\", horario.hora as \"Hora\", equipo.nombre as \"Equipo\", proyecto.nombre as \"Proyecto\" from horario inner join dia on horario.codigo_dia = dia.codigo inner join equipo on horario.codigo_equipo = equipo.codigo left join proyecto on horario.codigo_proyecto = proyecto.codigo where 1=1 ";
                 if (dia.Length > 0)
                 {
-                    baseQuery += "and UPPER(dia.dia) LIKE UPPER('%" + dia + "%') ";
+                    baseQuery += "and DIA LIKE TO_DATE( '" + dia + "', 'YYYY/MM/DD' ) ";
                 }
 
                 if(hora.Length > 0)
@@ -112,7 +112,7 @@ namespace APP_NATURAL_VERDE.Dao
                     Horario horario = new Horario()
                     {
                         codigo = Convert.ToInt32(rdr["Codigo Horario"]),
-                        dia = Convert.ToString(rdr["Dia"]),
+                        dia = Convert.ToDateTime(rdr["Dia"]),
                         hora = Convert.ToString(rdr["Hora"]),
                         equipo = Convert.ToString(rdr["Equipo"]),
                         proyecto = Convert.ToString(rdr["Proyecto"])

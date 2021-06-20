@@ -34,13 +34,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDia = new MetroFramework.Controls.MetroTextBox();
             this.btnAgregarDias = new MetroFramework.Controls.MetroButton();
             this.btnEliminarDias = new MetroFramework.Controls.MetroButton();
             this.dgDiasDisponibles = new MetroFramework.Controls.MetroGrid();
             this.txtCodigoDia = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtFiltrarDia = new MetroFramework.Controls.MetroTextBox();
+            this.dateTimeDia = new MetroFramework.Controls.MetroDateTime();
+            this.dateTimeFiltrar = new MetroFramework.Controls.MetroDateTime();
+            this.btnFiltrar = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgDiasDisponibles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoDia)).BeginInit();
             this.SuspendLayout();
@@ -75,40 +76,9 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Codigo";
             // 
-            // txtDia
-            // 
-            // 
-            // 
-            // 
-            this.txtDia.CustomButton.Image = null;
-            this.txtDia.CustomButton.Location = new System.Drawing.Point(113, 1);
-            this.txtDia.CustomButton.Name = "";
-            this.txtDia.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtDia.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtDia.CustomButton.TabIndex = 1;
-            this.txtDia.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtDia.CustomButton.UseSelectable = true;
-            this.txtDia.CustomButton.Visible = false;
-            this.txtDia.Lines = new string[0];
-            this.txtDia.Location = new System.Drawing.Point(49, 110);
-            this.txtDia.MaxLength = 32767;
-            this.txtDia.Name = "txtDia";
-            this.txtDia.PasswordChar = '\0';
-            this.txtDia.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtDia.SelectedText = "";
-            this.txtDia.SelectionLength = 0;
-            this.txtDia.SelectionStart = 0;
-            this.txtDia.ShortcutsEnabled = true;
-            this.txtDia.Size = new System.Drawing.Size(135, 23);
-            this.txtDia.TabIndex = 9;
-            this.txtDia.UseSelectable = true;
-            this.txtDia.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtDia.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtDia.Click += new System.EventHandler(this.txtDia_Click);
-            // 
             // btnAgregarDias
             // 
-            this.btnAgregarDias.Location = new System.Drawing.Point(209, 110);
+            this.btnAgregarDias.Location = new System.Drawing.Point(255, 110);
             this.btnAgregarDias.Name = "btnAgregarDias";
             this.btnAgregarDias.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarDias.TabIndex = 14;
@@ -188,49 +158,45 @@
             this.label5.TabIndex = 24;
             this.label5.Text = "Filtrar Dia";
             // 
-            // txtFiltrarDia
+            // dateTimeDia
             // 
+            this.dateTimeDia.Location = new System.Drawing.Point(49, 110);
+            this.dateTimeDia.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateTimeDia.Name = "dateTimeDia";
+            this.dateTimeDia.Size = new System.Drawing.Size(200, 29);
+            this.dateTimeDia.TabIndex = 26;
             // 
+            // dateTimeFiltrar
             // 
+            this.dateTimeFiltrar.Location = new System.Drawing.Point(49, 173);
+            this.dateTimeFiltrar.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dateTimeFiltrar.Name = "dateTimeFiltrar";
+            this.dateTimeFiltrar.Size = new System.Drawing.Size(200, 29);
+            this.dateTimeFiltrar.TabIndex = 27;
             // 
-            this.txtFiltrarDia.CustomButton.Image = null;
-            this.txtFiltrarDia.CustomButton.Location = new System.Drawing.Point(113, 1);
-            this.txtFiltrarDia.CustomButton.Name = "";
-            this.txtFiltrarDia.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtFiltrarDia.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtFiltrarDia.CustomButton.TabIndex = 1;
-            this.txtFiltrarDia.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtFiltrarDia.CustomButton.UseSelectable = true;
-            this.txtFiltrarDia.CustomButton.Visible = false;
-            this.txtFiltrarDia.Lines = new string[0];
-            this.txtFiltrarDia.Location = new System.Drawing.Point(49, 173);
-            this.txtFiltrarDia.MaxLength = 32767;
-            this.txtFiltrarDia.Name = "txtFiltrarDia";
-            this.txtFiltrarDia.PasswordChar = '\0';
-            this.txtFiltrarDia.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtFiltrarDia.SelectedText = "";
-            this.txtFiltrarDia.SelectionLength = 0;
-            this.txtFiltrarDia.SelectionStart = 0;
-            this.txtFiltrarDia.ShortcutsEnabled = true;
-            this.txtFiltrarDia.Size = new System.Drawing.Size(135, 23);
-            this.txtFiltrarDia.TabIndex = 25;
-            this.txtFiltrarDia.UseSelectable = true;
-            this.txtFiltrarDia.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtFiltrarDia.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtFiltrarDia.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtFiltrarDia_KeyUp);
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(255, 173);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 28;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseSelectable = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // GestionDias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(829, 577);
-            this.Controls.Add(this.txtFiltrarDia);
+            this.Controls.Add(this.btnFiltrar);
+            this.Controls.Add(this.dateTimeFiltrar);
+            this.Controls.Add(this.dateTimeDia);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCodigoDia);
             this.Controls.Add(this.dgDiasDisponibles);
             this.Controls.Add(this.btnEliminarDias);
             this.Controls.Add(this.btnAgregarDias);
-            this.Controls.Add(this.txtDia);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -248,12 +214,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private MetroFramework.Controls.MetroTextBox txtDia;
         private MetroFramework.Controls.MetroButton btnAgregarDias;
         private MetroFramework.Controls.MetroButton btnEliminarDias;
         private MetroFramework.Controls.MetroGrid dgDiasDisponibles;
         private System.Windows.Forms.NumericUpDown txtCodigoDia;
         private System.Windows.Forms.Label label5;
-        private MetroFramework.Controls.MetroTextBox txtFiltrarDia;
+        private MetroFramework.Controls.MetroDateTime dateTimeDia;
+        private MetroFramework.Controls.MetroDateTime dateTimeFiltrar;
+        private MetroFramework.Controls.MetroButton btnFiltrar;
     }
 }

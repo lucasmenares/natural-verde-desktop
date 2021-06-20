@@ -10,7 +10,7 @@ namespace APP_NATURAL_VERDE.Clases
     {
         public int codigo { get; set; }
 
-        public String dia { get; set; }
+        public DateTime dia { get; set; }
 
         public Dia()
         {

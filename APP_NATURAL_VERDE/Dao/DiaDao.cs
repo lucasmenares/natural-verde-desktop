@@ -34,7 +34,7 @@ namespace APP_NATURAL_VERDE.Dao
                 ora.Open();
                 OracleCommand comando = new OracleCommand("SP_ADD_DIA", ora);
                 comando.CommandType = CommandType.StoredProcedure;
-                comando.Parameters.Add("DIA", OracleType.VarChar).Value = dia.dia;
+                comando.Parameters.Add("DIA", OracleType.DateTime).Value = dia.dia;
                 if (comando.ExecuteNonQuery() > 0)
                 {
                     respuesta = true;
@@ -101,14 +101,14 @@ namespace APP_NATURAL_VERDE.Dao
             try
             {
                 ora.Open();
-                OracleCommand comando = new OracleCommand("SELECT * FROM DIA", ora);
+                OracleCommand comando = new OracleCommand("SELECT * FROM DIA ORDER BY CODIGO DESC", ora);
                 OracleDataReader rdr = comando.ExecuteReader();
                 while (rdr.Read())
                 {
                     Dia dia = new Dia()
                     {
                         codigo = Convert.ToInt32(rdr["CODIGO"]),
-                        dia = Convert.ToString(rdr["DIA"])
+                        dia = Convert.ToDateTime(rdr["DIA"])
                     };
                     lista.Add(dia);
                 }
@@ -126,21 +126,22 @@ namespace APP_NATURAL_VERDE.Dao
             return lista;
         }
 
-        public List<Dia> listadoDiaFiltrar(String nombre)
+        public List<Dia> listadoDiaFiltrar(String diaFiltro)
         {
 
             List<Dia> listaFiltrada = new List<Dia>();
             try
             {
                 ora.Open();
-                OracleCommand comando = new OracleCommand("SELECT * FROM DIA WHERE UPPER(DIA) LIKE UPPER('%" + nombre + "%')", ora);
+                
+                OracleCommand comando = new OracleCommand("SELECT * FROM DIA WHERE DIA LIKE TO_DATE( '"+ diaFiltro + "', 'YYYY/MM/DD' ) ", ora);
                 OracleDataReader rdr = comando.ExecuteReader();
                 while (rdr.Read())
                 {
                     Dia dia = new Dia()
                     {
                         codigo = Convert.ToInt32(rdr["CODIGO"]),
-                        dia = Convert.ToString(rdr["DIA"])
+                        dia = Convert.ToDateTime(rdr["DIA"])
                     };
                     listaFiltrada.Add(dia);
                 }
