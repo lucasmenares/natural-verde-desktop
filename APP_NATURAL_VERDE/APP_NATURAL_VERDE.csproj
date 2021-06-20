@@ -59,9 +59,13 @@
   <ItemGroup>
     <Compile Include="Clases\Dia.cs" />
     <Compile Include="Clases\Equipo.cs" />
+    <Compile Include="Clases\FiltroHorario.cs" />
+    <Compile Include="Clases\Horario.cs" />
+    <Compile Include="Clases\ResultadoBD.cs" />
     <Compile Include="Clases\Servicio.cs" />
     <Compile Include="Dao\DiaDao.cs" />
     <Compile Include="Dao\EquipoDao.cs" />
+    <Compile Include="Dao\HorarioDao.cs" />
     <Compile Include="Dao\ServicioDao.cs" />
     <Compile Include="GestionDias.cs">
       <SubType>Form</SubType>

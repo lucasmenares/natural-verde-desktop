@@ -69,14 +69,15 @@ namespace APP_NATURAL_VERDE
                 else
                 {
                     codigo = Int32.Parse(txtCodigoDia.Text);
-                    if (dao.eliminarDia(codigo))
+                    ResultadoBD resultado = dao.eliminarDia(codigo);
+                    if (resultado.respuesta)
                     {
-                        MetroFramework.MetroMessageBox.Show(ActiveForm, "DIA ELIMINADO ", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroFramework.MetroMessageBox.Show(ActiveForm, resultado.mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dgDiasDisponibles.DataSource = dao.listadoDia();
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(ActiveForm, "EL DIA CON EL CODIGO INGRESADO NO EXISTE", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(ActiveForm, resultado.mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 txtCodigoDia.Text = "0";

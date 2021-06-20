@@ -49,30 +49,43 @@ namespace APP_NATURAL_VERDE.Dao
             return respuesta;
         }
 
-        public bool eliminarEquipo (int codigo)
+        public ResultadoBD eliminarEquipo(int codigo)
         {
-            bool respuesta = false;
+            ResultadoBD resultado = new ResultadoBD();
             try
             {
                 ora.Open();
-                OracleCommand comando = new OracleCommand("delete from EQUIPO where codigo = "+codigo, ora);
-
+                OracleCommand comando = new OracleCommand("select codigo from equipo where codigo = " + codigo, ora);
+                OracleDataReader rdr = comando.ExecuteReader();
+                if (!rdr.HasRows)
+                {
+                    resultado.mensaje = "El equipo con ese código especificado no existe";
+                    return resultado;
+                }
+                comando = new OracleCommand("select codigo, codigo_equipo from horario where codigo_equipo = " + codigo, ora);
+                rdr = comando.ExecuteReader();
+                if (rdr.HasRows)
+                {
+                    resultado.mensaje = "No puedes eliminar un equipo con horarios asociados";
+                    return resultado;
+                }
+                comando = new OracleCommand("delete from EQUIPO where codigo = " + codigo, ora);
                 if (comando.ExecuteNonQuery() > 0)
                 {
-                    respuesta = true;
-
+                    resultado.mensaje = "Se ha eliminado el equipo correctamente";
+                    resultado.respuesta = true;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
                 throw;
             }
             finally
             {
                 ora.Close();
             }
-            return respuesta;
+            return resultado;
         }
 
 

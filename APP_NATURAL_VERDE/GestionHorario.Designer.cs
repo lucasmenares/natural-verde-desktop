@@ -28,23 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.txtHora = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuardarGH = new System.Windows.Forms.Button();
-            this.txtCodigoEquipo = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodigoHorario = new System.Windows.Forms.NumericUpDown();
             this.btnEliminarHorario = new System.Windows.Forms.Button();
             this.dgHorario = new MetroFramework.Controls.MetroGrid();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtFiltrarHora = new MetroFramework.Controls.MetroTextBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoEquipo)).BeginInit();
+            this.txtFiltroDia = new MetroFramework.Controls.MetroTextBox();
+            this.cbxDia = new MetroFramework.Controls.MetroComboBox();
+            this.cbxEquipo = new MetroFramework.Controls.MetroComboBox();
+            this.btnReiniciarFiltros = new MetroFramework.Controls.MetroButton();
+            this.txtFiltroHora = new MetroFramework.Controls.MetroTextBox();
+            this.btnFiltrar = new MetroFramework.Controls.MetroButton();
+            this.cbDisponible = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoHorario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgHorario)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +56,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(58, 60);
+            this.label2.Location = new System.Drawing.Point(20, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 16);
             this.label2.TabIndex = 4;
@@ -74,7 +77,7 @@
             this.txtHora.CustomButton.UseSelectable = true;
             this.txtHora.CustomButton.Visible = false;
             this.txtHora.Lines = new string[0];
-            this.txtHora.Location = new System.Drawing.Point(61, 88);
+            this.txtHora.Location = new System.Drawing.Point(23, 34);
             this.txtHora.MaxLength = 32767;
             this.txtHora.Name = "txtHora";
             this.txtHora.PasswordChar = '\0';
@@ -93,43 +96,37 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(222, 60);
+            this.label1.Location = new System.Drawing.Point(149, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 16);
+            this.label1.Size = new System.Drawing.Size(29, 16);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Codigo Dia";
+            this.label1.Text = "Dia";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(395, 60);
+            this.label3.Location = new System.Drawing.Point(276, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 16);
+            this.label3.Size = new System.Drawing.Size(52, 16);
             this.label3.TabIndex = 13;
-            this.label3.Text = "Codigo Equipo";
+            this.label3.Text = "Equipo";
             // 
             // btnGuardarGH
             // 
-            this.btnGuardarGH.Location = new System.Drawing.Point(565, 88);
+            this.btnGuardarGH.Location = new System.Drawing.Point(406, 34);
             this.btnGuardarGH.Name = "btnGuardarGH";
             this.btnGuardarGH.Size = new System.Drawing.Size(75, 23);
             this.btnGuardarGH.TabIndex = 21;
             this.btnGuardarGH.Text = "Guardar";
             this.btnGuardarGH.UseVisualStyleBackColor = true;
-            // 
-            // txtCodigoEquipo
-            // 
-            this.txtCodigoEquipo.Location = new System.Drawing.Point(398, 91);
-            this.txtCodigoEquipo.Name = "txtCodigoEquipo";
-            this.txtCodigoEquipo.Size = new System.Drawing.Size(120, 20);
-            this.txtCodigoEquipo.TabIndex = 23;
+            this.btnGuardarGH.Click += new System.EventHandler(this.btnGuardarGH_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(222, 138);
+            this.label4.Location = new System.Drawing.Point(23, 120);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 16);
             this.label4.TabIndex = 24;
@@ -137,19 +134,20 @@
             // 
             // txtCodigoHorario
             // 
-            this.txtCodigoHorario.Location = new System.Drawing.Point(225, 167);
+            this.txtCodigoHorario.Location = new System.Drawing.Point(26, 139);
             this.txtCodigoHorario.Name = "txtCodigoHorario";
             this.txtCodigoHorario.Size = new System.Drawing.Size(120, 20);
             this.txtCodigoHorario.TabIndex = 25;
             // 
             // btnEliminarHorario
             // 
-            this.btnEliminarHorario.Location = new System.Drawing.Point(398, 164);
+            this.btnEliminarHorario.Location = new System.Drawing.Point(152, 139);
             this.btnEliminarHorario.Name = "btnEliminarHorario";
             this.btnEliminarHorario.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarHorario.TabIndex = 26;
             this.btnEliminarHorario.Text = "Eliminar";
             this.btnEliminarHorario.UseVisualStyleBackColor = true;
+            this.btnEliminarHorario.Click += new System.EventHandler(this.btnEliminarHorario_Click);
             // 
             // dgHorario
             // 
@@ -158,105 +156,180 @@
             this.dgHorario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgHorario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgHorario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgHorario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgHorario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgHorario.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgHorario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgHorario.EnableHeadersVisualStyles = false;
             this.dgHorario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgHorario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgHorario.Location = new System.Drawing.Point(60, 238);
+            this.dgHorario.Location = new System.Drawing.Point(23, 168);
             this.dgHorario.Name = "dgHorario";
             this.dgHorario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgHorario.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgHorario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgHorario.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgHorario.Size = new System.Drawing.Size(636, 172);
+            this.dgHorario.Size = new System.Drawing.Size(562, 219);
             this.dgHorario.TabIndex = 27;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(58, 138);
+            this.label5.Location = new System.Drawing.Point(20, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.Size = new System.Drawing.Size(95, 16);
             this.label5.TabIndex = 28;
-            this.label5.Text = "Filtrar Hora";
+            this.label5.Text = "Filtrar por día";
             // 
-            // txtFiltrarHora
-            // 
-            // 
+            // txtFiltroDia
             // 
             // 
-            this.txtFiltrarHora.CustomButton.Image = null;
-            this.txtFiltrarHora.CustomButton.Location = new System.Drawing.Point(101, 1);
-            this.txtFiltrarHora.CustomButton.Name = "";
-            this.txtFiltrarHora.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtFiltrarHora.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtFiltrarHora.CustomButton.TabIndex = 1;
-            this.txtFiltrarHora.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtFiltrarHora.CustomButton.UseSelectable = true;
-            this.txtFiltrarHora.CustomButton.Visible = false;
-            this.txtFiltrarHora.Lines = new string[0];
-            this.txtFiltrarHora.Location = new System.Drawing.Point(61, 167);
-            this.txtFiltrarHora.MaxLength = 32767;
-            this.txtFiltrarHora.Name = "txtFiltrarHora";
-            this.txtFiltrarHora.PasswordChar = '\0';
-            this.txtFiltrarHora.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtFiltrarHora.SelectedText = "";
-            this.txtFiltrarHora.SelectionLength = 0;
-            this.txtFiltrarHora.SelectionStart = 0;
-            this.txtFiltrarHora.ShortcutsEnabled = true;
-            this.txtFiltrarHora.Size = new System.Drawing.Size(123, 23);
-            this.txtFiltrarHora.TabIndex = 29;
-            this.txtFiltrarHora.UseSelectable = true;
-            this.txtFiltrarHora.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtFiltrarHora.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroComboBox1
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(225, 82);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.TabIndex = 30;
-            this.metroComboBox1.UseSelectable = true;
+            this.txtFiltroDia.CustomButton.Image = null;
+            this.txtFiltroDia.CustomButton.Location = new System.Drawing.Point(101, 1);
+            this.txtFiltroDia.CustomButton.Name = "";
+            this.txtFiltroDia.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtFiltroDia.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtFiltroDia.CustomButton.TabIndex = 1;
+            this.txtFiltroDia.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtFiltroDia.CustomButton.UseSelectable = true;
+            this.txtFiltroDia.CustomButton.Visible = false;
+            this.txtFiltroDia.Lines = new string[0];
+            this.txtFiltroDia.Location = new System.Drawing.Point(23, 89);
+            this.txtFiltroDia.MaxLength = 32767;
+            this.txtFiltroDia.Name = "txtFiltroDia";
+            this.txtFiltroDia.PasswordChar = '\0';
+            this.txtFiltroDia.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFiltroDia.SelectedText = "";
+            this.txtFiltroDia.SelectionLength = 0;
+            this.txtFiltroDia.SelectionStart = 0;
+            this.txtFiltroDia.ShortcutsEnabled = true;
+            this.txtFiltroDia.Size = new System.Drawing.Size(123, 23);
+            this.txtFiltroDia.TabIndex = 29;
+            this.txtFiltroDia.UseSelectable = true;
+            this.txtFiltroDia.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtFiltroDia.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // cbxDia
+            // 
+            this.cbxDia.FormattingEnabled = true;
+            this.cbxDia.ItemHeight = 23;
+            this.cbxDia.Location = new System.Drawing.Point(152, 34);
+            this.cbxDia.Name = "cbxDia";
+            this.cbxDia.Size = new System.Drawing.Size(121, 29);
+            this.cbxDia.TabIndex = 30;
+            this.cbxDia.UseSelectable = true;
+            // 
+            // cbxEquipo
+            // 
+            this.cbxEquipo.FormattingEnabled = true;
+            this.cbxEquipo.ItemHeight = 23;
+            this.cbxEquipo.Location = new System.Drawing.Point(279, 34);
+            this.cbxEquipo.Name = "cbxEquipo";
+            this.cbxEquipo.Size = new System.Drawing.Size(121, 29);
+            this.cbxEquipo.TabIndex = 31;
+            this.cbxEquipo.UseSelectable = true;
+            // 
+            // btnReiniciarFiltros
+            // 
+            this.btnReiniciarFiltros.Location = new System.Drawing.Point(459, 89);
+            this.btnReiniciarFiltros.Name = "btnReiniciarFiltros";
+            this.btnReiniciarFiltros.Size = new System.Drawing.Size(101, 23);
+            this.btnReiniciarFiltros.TabIndex = 34;
+            this.btnReiniciarFiltros.Text = "Reiniciar Filtos";
+            this.btnReiniciarFiltros.UseSelectable = true;
+            this.btnReiniciarFiltros.Click += new System.EventHandler(this.btnReiniciarFiltros_Click);
+            // 
+            // txtFiltroHora
+            // 
+            // 
+            // 
+            // 
+            this.txtFiltroHora.CustomButton.Image = null;
+            this.txtFiltroHora.CustomButton.Location = new System.Drawing.Point(71, 1);
+            this.txtFiltroHora.CustomButton.Name = "";
+            this.txtFiltroHora.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtFiltroHora.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtFiltroHora.CustomButton.TabIndex = 1;
+            this.txtFiltroHora.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtFiltroHora.CustomButton.UseSelectable = true;
+            this.txtFiltroHora.CustomButton.Visible = false;
+            this.txtFiltroHora.Lines = new string[0];
+            this.txtFiltroHora.Location = new System.Drawing.Point(152, 89);
+            this.txtFiltroHora.MaxLength = 32767;
+            this.txtFiltroHora.Name = "txtFiltroHora";
+            this.txtFiltroHora.PasswordChar = '\0';
+            this.txtFiltroHora.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtFiltroHora.SelectedText = "";
+            this.txtFiltroHora.SelectionLength = 0;
+            this.txtFiltroHora.SelectionStart = 0;
+            this.txtFiltroHora.ShortcutsEnabled = true;
+            this.txtFiltroHora.Size = new System.Drawing.Size(93, 23);
+            this.txtFiltroHora.TabIndex = 35;
+            this.txtFiltroHora.UseSelectable = true;
+            this.txtFiltroHora.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtFiltroHora.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(378, 89);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFiltrar.TabIndex = 36;
+            this.btnFiltrar.Text = "Filtrar";
+            this.btnFiltrar.UseSelectable = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
+            // 
+            // cbDisponible
+            // 
+            this.cbDisponible.FormattingEnabled = true;
+            this.cbDisponible.ItemHeight = 23;
+            this.cbDisponible.Location = new System.Drawing.Point(251, 90);
+            this.cbDisponible.Name = "cbDisponible";
+            this.cbDisponible.Size = new System.Drawing.Size(121, 29);
+            this.cbDisponible.TabIndex = 37;
+            this.cbDisponible.UseSelectable = true;
+            this.cbDisponible.SelectedIndexChanged += new System.EventHandler(this.metroComboBox1_SelectedIndexChanged);
             // 
             // GestionHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 480);
-            this.Controls.Add(this.metroComboBox1);
-            this.Controls.Add(this.txtFiltrarHora);
+            this.ClientSize = new System.Drawing.Size(608, 480);
+            this.Controls.Add(this.cbDisponible);
+            this.Controls.Add(this.btnFiltrar);
+            this.Controls.Add(this.txtFiltroHora);
+            this.Controls.Add(this.btnReiniciarFiltros);
+            this.Controls.Add(this.cbxEquipo);
+            this.Controls.Add(this.cbxDia);
+            this.Controls.Add(this.txtFiltroDia);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgHorario);
             this.Controls.Add(this.btnEliminarHorario);
             this.Controls.Add(this.txtCodigoHorario);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtCodigoEquipo);
             this.Controls.Add(this.btnGuardarGH);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -266,7 +339,6 @@
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Load += new System.EventHandler(this.GestionHorario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtCodigoEquipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigoHorario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgHorario)).EndInit();
             this.ResumeLayout(false);
@@ -281,13 +353,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuardarGH;
-        private System.Windows.Forms.NumericUpDown txtCodigoEquipo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown txtCodigoHorario;
         private System.Windows.Forms.Button btnEliminarHorario;
         private MetroFramework.Controls.MetroGrid dgHorario;
         private System.Windows.Forms.Label label5;
-        private MetroFramework.Controls.MetroTextBox txtFiltrarHora;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroTextBox txtFiltroDia;
+        private MetroFramework.Controls.MetroComboBox cbxDia;
+        private MetroFramework.Controls.MetroComboBox cbxEquipo;
+        private MetroFramework.Controls.MetroButton btnReiniciarFiltros;
+        private MetroFramework.Controls.MetroTextBox txtFiltroHora;
+        private MetroFramework.Controls.MetroButton btnFiltrar;
+        private MetroFramework.Controls.MetroComboBox cbDisponible;
     }
 }

@@ -56,30 +56,43 @@ namespace APP_NATURAL_VERDE.Dao
         }
 
 
-        public bool eliminarDia(int codigo)
+        public ResultadoBD eliminarDia(int codigo)
         {
-            bool respuesta = false;
+            ResultadoBD resultado = new ResultadoBD();
             try
             {
                 ora.Open();
-                OracleCommand comando = new OracleCommand("delete from DIA where codigo = " + codigo, ora);
-
+                OracleCommand comando = new OracleCommand("select codigo from dia where codigo = " + codigo, ora);
+                OracleDataReader rdr = comando.ExecuteReader();
+                if (!rdr.HasRows)
+                {
+                    resultado.mensaje = "El día con ese código especificado no existe";
+                    return resultado;
+                }
+                comando = new OracleCommand("select codigo, codigo_dia from horario where codigo_dia = " + codigo, ora);
+                rdr = comando.ExecuteReader();
+                if (rdr.HasRows)
+                {
+                    resultado.mensaje = "No puedes eliminar un día con horarios asociados";
+                    return resultado;
+                }
+                comando = new OracleCommand("delete from DIA where codigo = " + codigo, ora);
                 if (comando.ExecuteNonQuery() > 0)
                 {
-                    respuesta = true;
-
+                    resultado.mensaje = "Se ha eliminado el día correctamente";
+                    resultado.respuesta = true;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
                 throw;
             }
             finally
             {
                 ora.Close();
             }
-            return respuesta;
+            return resultado;
         }
 
         public List<Dia> listadoDia()

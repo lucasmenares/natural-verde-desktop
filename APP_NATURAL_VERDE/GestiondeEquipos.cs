@@ -64,14 +64,15 @@ namespace APP_NATURAL_VERDE
                 else
                 {
                     codigo = Int32.Parse(txtCodigoEquipo.Text);
-                    if (dao.eliminarEquipo(codigo))
+                    ResultadoBD resultado = dao.eliminarEquipo(codigo);
+                    if (resultado.respuesta)
                     {
-                        MetroFramework.MetroMessageBox.Show(ActiveForm, "EQUIPO ELIMINADO ", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroFramework.MetroMessageBox.Show(ActiveForm, resultado.mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dgGestionEquipo.DataSource = dao.listadoEquipo();
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(ActiveForm, "EL EQUIPO CON EL CODIGO INGRESADO NO EXISTE", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(ActiveForm, resultado.mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 txtCodigoEquipo.Text = "0";
