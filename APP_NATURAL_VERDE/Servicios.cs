@@ -64,14 +64,15 @@ namespace APP_NATURAL_VERDE
                 else
                 {
                     codigo = Int32.Parse(txtCodigoServicio.Text);
-                    if (dao.eliminarServicio(codigo))
+                    ResultadoBD resultado = dao.eliminarServicio(codigo);
+                    if (resultado.respuesta)
                     {
-                        MetroFramework.MetroMessageBox.Show(ActiveForm, "SERVICIO ELIMINADO ", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MetroFramework.MetroMessageBox.Show(ActiveForm, resultado.mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dgServicios.DataSource = dao.listadoServicio();
                     }
                     else
                     {
-                        MetroFramework.MetroMessageBox.Show(ActiveForm, "EL SERVICIO CON EL CODIGO INGRESADO NO EXISTE", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(ActiveForm, resultado.mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 txtCodigoServicio.Text = "0";

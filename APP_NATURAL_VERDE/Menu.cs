@@ -52,6 +52,20 @@ namespace APP_NATURAL_VERDE
             fd.Show();
         }
 
+        private void verInsumos(object formularioInsumos)
+        {
+
+            this.panelContenedor.Controls.Clear();
+
+            Form fd = formularioInsumos as Form;
+            fd.TopLevel = false;
+            fd.Dock = DockStyle.Fill;
+
+            this.panelContenedor.Controls.Add(fd);
+            this.panelContenedor.Tag = fd;
+            fd.Show();
+        }
+
         private void gestionHorario(object formularioHorario)
         {
 
@@ -85,6 +99,20 @@ namespace APP_NATURAL_VERDE
             fs.Show();
         }
 
+        private void insumosAProyectos(object formularioInsumosAProyectos)
+        {
+
+            this.panelContenedor.Controls.Clear();
+
+            Form fs = formularioInsumosAProyectos as Form;
+            fs.TopLevel = false;
+            fs.Dock = DockStyle.Fill;
+
+            this.panelContenedor.Controls.Add(fs);
+            this.panelContenedor.Tag = fs;
+            fs.Show();
+        }
+
         private void btnServicios_Click(object sender, EventArgs e)
         {
             agregarServicio(new Servicios());
@@ -93,6 +121,16 @@ namespace APP_NATURAL_VERDE
         private void btnGestionHorario_Click(object sender, EventArgs e)
         {
             gestionHorario(new GestionHorario());
+        }
+
+        private void btnInsumos_Click(object sender, EventArgs e)
+        {
+            verInsumos(new VerInsumos());
+        }
+
+        private void InsumosAProyectos_Click(object sender, EventArgs e)
+        {
+            insumosAProyectos(new InsumosAProyectos());
         }
     }
 }
