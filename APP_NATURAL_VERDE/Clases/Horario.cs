@@ -13,7 +13,7 @@ namespace APP_NATURAL_VERDE.Clases
         public int codigo_dia { get; set; }
         public int codigo_equipo { get; set; }
         public int codigo_proyecto { get; set; }
-        public String dia { get; set; }
+        public DateTime dia { get; set; }
         public String equipo { get; set; }
         public String proyecto { get; set; }
 

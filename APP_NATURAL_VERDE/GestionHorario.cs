@@ -1,6 +1,4 @@
-﻿using APP_NATURAL_VERDE.Clases;
-using APP_NATURAL_VERDE.Dao;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OracleClient;
+using System.Data;
+using APP_NATURAL_VERDE.Clases;
+using APP_NATURAL_VERDE.Dao;
+using System.Globalization;
 
 namespace APP_NATURAL_VERDE
 {
@@ -20,6 +23,7 @@ namespace APP_NATURAL_VERDE
             InitializeComponent();
             
             dgHorario.DataSource = horarioDao.listarHorario();
+            dgHorario.Columns["dia"].DefaultCellStyle.Format = "dddd, d MMMM yyyy";
             dgHorario.AutoGenerateColumns = false;
             dgHorario.Columns["codigo_dia"].Visible = false;
             dgHorario.Columns["codigo_equipo"].Visible = false;
@@ -34,6 +38,8 @@ namespace APP_NATURAL_VERDE
             cbxDia.DataSource = dias;
             cbxDia.ValueMember = "codigo";
             cbxDia.DisplayMember = "dia";
+            cbxDia.FormatString = "dddd, d MMMM yyyy";
+
 
             // Equipo combobox
             EquipoDao equipoDao = new EquipoDao();
@@ -89,7 +95,6 @@ namespace APP_NATURAL_VERDE
             txtHora.Text = "";
             cbxDia.SelectedIndex = 0;
             cbxEquipo.SelectedIndex = 0;
-            txtFiltroDia.Text = "";
             dgHorario.DataSource = horarioDao.listarHorario();
         }
 
@@ -117,7 +122,6 @@ namespace APP_NATURAL_VERDE
                     }
                 }
                 txtCodigoHorario.Text = "0";
-                txtFiltroDia.Text = "";
                 dgHorario.DataSource = horarioDao.listarHorario();
 
             }
@@ -130,21 +134,15 @@ namespace APP_NATURAL_VERDE
 
         private void btnReiniciarFiltros_Click(object sender, EventArgs e)
         {
-            txtFiltroDia.Text = "";
             dgHorario.DataSource = horarioDao.listarHorario();
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            String dia = txtFiltroDia.Text;
+            String dia = dateTimeFiltro.Value.ToString("yyyy/MM/dd");
             String hora = txtFiltroHora.Text;
             int disponible = Convert.ToInt32(cbDisponible.SelectedValue);
             dgHorario.DataSource = horarioDao.filtrarHorario(dia, hora, disponible);
-        }
-
-        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Data.OracleClient;
 using System.Data;
 using APP_NATURAL_VERDE.Clases;
 using APP_NATURAL_VERDE.Dao;
+using System.Globalization;
 
 namespace APP_NATURAL_VERDE
 {
@@ -26,6 +27,7 @@ namespace APP_NATURAL_VERDE
             InitializeComponent();
             //Cargar Grid de la gestion de equipo
             dgDiasDisponibles.DataSource = dao.listadoDia();
+            dgDiasDisponibles.Columns["dia"].DefaultCellStyle.Format = "dddd, d MMMM yyyy";
         }
 
         private void btnAgregarDias_Click(object sender, EventArgs e)
@@ -33,13 +35,9 @@ namespace APP_NATURAL_VERDE
             try
             {
                 Dia dia  = new Dia();
-                dia.dia = txtDia.Text;
+                dia.dia = dateTimeDia.Value;
 
-                if (txtDia.Text == "")
-                {
-                    MetroFramework.MetroMessageBox.Show(ActiveForm, "EL CAMPO NO DEBE ESTAR VACIO", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (dao.agregarDia(dia))
+                if (dao.agregarDia(dia))
                 {
                     MetroFramework.MetroMessageBox.Show(ActiveForm, "DIA GUARDADO ", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgDiasDisponibles.DataSource = dao.listadoDia();
@@ -48,7 +46,6 @@ namespace APP_NATURAL_VERDE
                 {
                     MetroFramework.MetroMessageBox.Show(ActiveForm, "NO SE PUDO GUARDAR EL DIA", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                txtDia.Text = "";
             }
             catch (Exception ex)
             {
@@ -94,22 +91,15 @@ namespace APP_NATURAL_VERDE
 
         }
 
-        private void txtFiltrarDia_KeyUp(object sender, KeyEventArgs e)
-        {
-            String nombre = txtFiltrarDia.Text;
-            if (txtFiltrarDia.Text == "")
-            {
-                dgDiasDisponibles.DataSource = new DiaDao().listadoDia();
-            }
-            else
-            {
-                dgDiasDisponibles.DataSource = new DiaDao().listadoDiaFiltrar(nombre);
-            }
-        }
-
         private void txtCodigoDia_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            String diaFiltrado = dateTimeFiltrar.Value.ToString("yyyy/MM/dd");
+            dgDiasDisponibles.DataSource = new DiaDao().listadoDiaFiltrar(diaFiltrado);
         }
     }
 }

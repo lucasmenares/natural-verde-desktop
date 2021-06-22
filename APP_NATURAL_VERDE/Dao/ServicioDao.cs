@@ -50,18 +50,30 @@ namespace APP_NATURAL_VERDE.Dao
             return respuesta;
         }
 
-        public bool eliminarServicio(int codigo)
+        public ResultadoBD eliminarServicio(int codigo)
         {
-            bool respuesta = false;
+            ResultadoBD resultado = new ResultadoBD();
             try
             {
                 ora.Open();
-                OracleCommand comando = new OracleCommand("delete from SERVICIO where codigo = " + codigo, ora);
-
+                OracleCommand comando = new OracleCommand("select codigo from servicio where codigo = "+codigo, ora);
+                OracleDataReader rdr = comando.ExecuteReader();
+                if (!rdr.HasRows)
+                {
+                    resultado.mensaje = "El servicio con el código especificado no existe";
+                    return resultado;
+                }
+                comando = new OracleCommand("select codigo, codigo_servicio from proyecto where codigo_servicio = " + codigo, ora);
+                if (rdr.HasRows)
+                {
+                    resultado.mensaje = "No puedes eliminar un servicio con proyectos asociados";
+                    return resultado;
+                }
+                comando = new OracleCommand("delete from SERVICIO where codigo = " + codigo, ora);
                 if (comando.ExecuteNonQuery() > 0)
                 {
-                    respuesta = true;
-
+                    resultado.mensaje = "Servicio eliminado correctamente";
+                    resultado.respuesta = true;
                 }
             }
             catch (Exception)
@@ -73,7 +85,7 @@ namespace APP_NATURAL_VERDE.Dao
             {
                 ora.Close();
             }
-            return respuesta;
+            return resultado;
         }
 
 
