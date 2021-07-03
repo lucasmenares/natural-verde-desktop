@@ -113,6 +113,20 @@ namespace APP_NATURAL_VERDE
             fs.Show();
         }
 
+        private void gestionProyectos(object formularioProyectos)
+        {
+
+            this.panelContenedor.Controls.Clear();
+
+            Form fs = formularioProyectos as Form;
+            fs.TopLevel = false;
+            fs.Dock = DockStyle.Fill;
+
+            this.panelContenedor.Controls.Add(fs);
+            this.panelContenedor.Tag = fs;
+            fs.Show();
+        }
+
         private void btnServicios_Click(object sender, EventArgs e)
         {
             agregarServicio(new Servicios());
@@ -131,6 +145,11 @@ namespace APP_NATURAL_VERDE
         private void InsumosAProyectos_Click(object sender, EventArgs e)
         {
             insumosAProyectos(new InsumosAProyectos());
+        }
+
+        private void btnProyectos_Click(object sender, EventArgs e)
+        {
+            gestionProyectos(new Proyectos());
         }
     }
 }

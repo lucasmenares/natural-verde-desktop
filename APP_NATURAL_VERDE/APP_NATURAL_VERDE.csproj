@@ -81,9 +81,11 @@
   <ItemGroup>
     <Compile Include="Clases\Dia.cs" />
     <Compile Include="Clases\Equipo.cs" />
+    <Compile Include="Clases\Estado.cs" />
     <Compile Include="Clases\FiltroHorario.cs" />
     <Compile Include="Clases\Horario.cs" />
     <Compile Include="Clases\Insumo.cs" />
+    <Compile Include="Clases\Proyecto.cs" />
     <Compile Include="Clases\RespuestaInsumos.cs" />
     <Compile Include="Clases\ResultadoBD.cs" />
     <Compile Include="Clases\Servicio.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="Dao\EquipoDao.cs" />
     <Compile Include="Dao\HorarioDao.cs" />
     <Compile Include="Dao\InsumoDao.cs" />
+    <Compile Include="Dao\ProyectoDao.cs" />
     <Compile Include="Dao\ServicioDao.cs" />
     <Compile Include="GestionDias.cs">
       <SubType>Form</SubType>

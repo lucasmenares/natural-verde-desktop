@@ -43,6 +43,7 @@ namespace APP_NATURAL_VERDE
             if (respuesta.respuesta)
             {
                 MetroFramework.MetroMessageBox.Show(ActiveForm, respuesta.mensaje, "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgInsumosAProyectos.DataSource = dao.listarProyectoInsumo();
             }
             else
             {

@@ -64,6 +64,7 @@ namespace APP_NATURAL_VERDE.Dao
                     return resultado;
                 }
                 comando = new OracleCommand("select codigo, codigo_servicio from proyecto where codigo_servicio = " + codigo, ora);
+                rdr = comando.ExecuteReader();
                 if (rdr.HasRows)
                 {
                     resultado.mensaje = "No puedes eliminar un servicio con proyectos asociados";

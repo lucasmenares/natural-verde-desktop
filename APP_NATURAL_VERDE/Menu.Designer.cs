@@ -29,40 +29,35 @@
         private void InitializeComponent()
         {
             this.panelBotones = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.InsumosAProyectos = new System.Windows.Forms.Button();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.btnGestionHorario = new System.Windows.Forms.Button();
             this.btnGestionEquipo = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnServicios = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnProyectos = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnInsumos = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnGestionDias = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelBotones.SuspendLayout();
-            this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -70,7 +65,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBotones
@@ -100,13 +100,23 @@
             this.panelBotones.Size = new System.Drawing.Size(223, 594);
             this.panelBotones.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::APP_NATURAL_VERDE.Properties.Resources.Macetero1;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 399);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            // 
             // InsumosAProyectos
             // 
             this.InsumosAProyectos.FlatAppearance.BorderSize = 0;
             this.InsumosAProyectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InsumosAProyectos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InsumosAProyectos.ForeColor = System.Drawing.Color.White;
-            this.InsumosAProyectos.Location = new System.Drawing.Point(54, 361);
+            this.InsumosAProyectos.Location = new System.Drawing.Point(54, 407);
             this.InsumosAProyectos.Name = "InsumosAProyectos";
             this.InsumosAProyectos.Size = new System.Drawing.Size(169, 25);
             this.InsumosAProyectos.TabIndex = 16;
@@ -114,13 +124,23 @@
             this.InsumosAProyectos.UseVisualStyleBackColor = true;
             this.InsumosAProyectos.Click += new System.EventHandler(this.InsumosAProyectos_Click);
             // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Image = global::APP_NATURAL_VERDE.Properties.Resources.Calendario;
+            this.pictureBox13.Location = new System.Drawing.Point(14, 310);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 15;
+            this.pictureBox13.TabStop = false;
+            // 
             // btnGestionHorario
             // 
             this.btnGestionHorario.FlatAppearance.BorderSize = 0;
             this.btnGestionHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionHorario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionHorario.ForeColor = System.Drawing.Color.White;
-            this.btnGestionHorario.Location = new System.Drawing.Point(62, 273);
+            this.btnGestionHorario.Location = new System.Drawing.Point(62, 319);
             this.btnGestionHorario.Name = "btnGestionHorario";
             this.btnGestionHorario.Size = new System.Drawing.Size(142, 25);
             this.btnGestionHorario.TabIndex = 14;
@@ -136,7 +156,7 @@
             this.btnGestionEquipo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionEquipo.ForeColor = System.Drawing.Color.White;
             this.btnGestionEquipo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionEquipo.Location = new System.Drawing.Point(62, 123);
+            this.btnGestionEquipo.Location = new System.Drawing.Point(62, 169);
             this.btnGestionEquipo.Name = "btnGestionEquipo";
             this.btnGestionEquipo.Size = new System.Drawing.Size(142, 25);
             this.btnGestionEquipo.TabIndex = 13;
@@ -172,7 +192,7 @@
             this.btnServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServicios.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServicios.ForeColor = System.Drawing.Color.White;
-            this.btnServicios.Location = new System.Drawing.Point(69, 175);
+            this.btnServicios.Location = new System.Drawing.Point(69, 221);
             this.btnServicios.Name = "btnServicios";
             this.btnServicios.Size = new System.Drawing.Size(75, 25);
             this.btnServicios.TabIndex = 12;
@@ -180,18 +200,39 @@
             this.btnServicios.UseVisualStyleBackColor = true;
             this.btnServicios.Click += new System.EventHandler(this.btnServicios_Click);
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::APP_NATURAL_VERDE.Properties.Resources.Macetero1;
+            this.pictureBox7.Location = new System.Drawing.Point(14, 356);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 11;
+            this.pictureBox7.TabStop = false;
+            // 
             // btnProyectos
             // 
             this.btnProyectos.FlatAppearance.BorderSize = 0;
             this.btnProyectos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProyectos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProyectos.ForeColor = System.Drawing.Color.White;
-            this.btnProyectos.Location = new System.Drawing.Point(71, 505);
+            this.btnProyectos.Location = new System.Drawing.Point(69, 449);
             this.btnProyectos.Name = "btnProyectos";
             this.btnProyectos.Size = new System.Drawing.Size(79, 25);
             this.btnProyectos.TabIndex = 10;
             this.btnProyectos.Text = "Proyectos";
             this.btnProyectos.UseVisualStyleBackColor = true;
+            this.btnProyectos.Click += new System.EventHandler(this.btnProyectos_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::APP_NATURAL_VERDE.Properties.Resources.Regadera1;
+            this.pictureBox6.Location = new System.Drawing.Point(14, 212);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
             // 
             // btnInsumos
             // 
@@ -199,7 +240,7 @@
             this.btnInsumos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsumos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsumos.ForeColor = System.Drawing.Color.White;
-            this.btnInsumos.Location = new System.Drawing.Point(62, 317);
+            this.btnInsumos.Location = new System.Drawing.Point(62, 363);
             this.btnInsumos.Name = "btnInsumos";
             this.btnInsumos.Size = new System.Drawing.Size(113, 25);
             this.btnInsumos.TabIndex = 8;
@@ -207,13 +248,43 @@
             this.btnInsumos.UseVisualStyleBackColor = true;
             this.btnInsumos.Click += new System.EventHandler(this.btnInsumos_Click);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::APP_NATURAL_VERDE.Properties.Resources.Regadera;
+            this.pictureBox5.Location = new System.Drawing.Point(13, 439);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::APP_NATURAL_VERDE.Properties.Resources.Calendario;
+            this.pictureBox4.Location = new System.Drawing.Point(14, 261);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::APP_NATURAL_VERDE.Properties.Resources.Vector1;
+            this.pictureBox3.Location = new System.Drawing.Point(89, 26);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            // 
             // btnGestionDias
             // 
             this.btnGestionDias.FlatAppearance.BorderSize = 0;
             this.btnGestionDias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGestionDias.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGestionDias.ForeColor = System.Drawing.Color.White;
-            this.btnGestionDias.Location = new System.Drawing.Point(70, 225);
+            this.btnGestionDias.Location = new System.Drawing.Point(70, 271);
             this.btnGestionDias.Name = "btnGestionDias";
             this.btnGestionDias.Size = new System.Drawing.Size(100, 25);
             this.btnGestionDias.TabIndex = 3;
@@ -221,6 +292,16 @@
             this.btnGestionDias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGestionDias.UseVisualStyleBackColor = true;
             this.btnGestionDias.Click += new System.EventHandler(this.btnGestionDias_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::APP_NATURAL_VERDE.Properties.Resources.Planta;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 160);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // panelContenedor
             // 
@@ -271,16 +352,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "NATURALVERDE";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(287, 175);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 44);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Bienvenido al sistema de gestión de\r\n                      Natural Verde\r\n";
-            // 
             // pictureBox12
             // 
             this.pictureBox12.Image = global::APP_NATURAL_VERDE.Properties.Resources.Vector2;
@@ -290,6 +361,16 @@
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 5;
             this.pictureBox12.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(287, 175);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(343, 44);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Bienvenido al sistema de gestión de\r\n                      Natural Verde\r\n";
             // 
             // pictureBox11
             // 
@@ -331,86 +412,6 @@
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
             // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Image = global::APP_NATURAL_VERDE.Properties.Resources.Calendario;
-            this.pictureBox13.Location = new System.Drawing.Point(14, 264);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(41, 41);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 15;
-            this.pictureBox13.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::APP_NATURAL_VERDE.Properties.Resources.Macetero1;
-            this.pictureBox7.Location = new System.Drawing.Point(14, 310);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(41, 41);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::APP_NATURAL_VERDE.Properties.Resources.Regadera1;
-            this.pictureBox6.Location = new System.Drawing.Point(14, 166);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(41, 41);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::APP_NATURAL_VERDE.Properties.Resources.Regadera;
-            this.pictureBox5.Location = new System.Drawing.Point(120, 550);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(41, 41);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::APP_NATURAL_VERDE.Properties.Resources.Calendario;
-            this.pictureBox4.Location = new System.Drawing.Point(14, 215);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(41, 41);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::APP_NATURAL_VERDE.Properties.Resources.Vector1;
-            this.pictureBox3.Location = new System.Drawing.Point(89, 26);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::APP_NATURAL_VERDE.Properties.Resources.Planta;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 114);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::APP_NATURAL_VERDE.Properties.Resources.Macetero1;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 353);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 41);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 17;
-            this.pictureBox1.TabStop = false;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,13 +423,7 @@
             this.Style = MetroFramework.MetroColorStyle.White;
             this.panelBotones.ResumeLayout(false);
             this.panelBotones.PerformLayout();
-            this.panelContenedor.ResumeLayout(false);
-            this.panelContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -436,7 +431,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelContenedor.ResumeLayout(false);
+            this.panelContenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
